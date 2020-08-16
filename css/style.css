@@ -29,6 +29,7 @@ body {
 .container {
     max-width: 1140px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .h1 {
@@ -155,6 +156,29 @@ body {
     background-repeat: no-repeat;
     margin-left: 10px;
     margin-top: 3px;
+}
+
+.burger-btn {
+    background: none;
+    border: none;
+    display: none;
+    flex-direction: column;
+    width: 30px;
+    height: 16px;
+    justify-content: space-between;
+    padding: 0;
+    align-items: flex-end;
+    outline: none;
+}
+.burger-btn span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #AB1860;
+    border-radius: 10px;
+}
+.burger-btn span:nth-child(3) {
+    width: 22px;
 }
 
 .offer-wrapper {

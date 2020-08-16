@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="css/splide-core.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
     <header class="page-header">
         <div class="container">
             <nav class="nav">
                 <span class="logo">Rozochka.fun</span>
-                <ul class="menu">
+                <button class="burger-btn" type="button" onclick="document.querySelector('.burger-menu').classList.toggle('open')">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu burger-menu">
                     <li class="menu-item"><a href="#" class="menu-link">О нас</a></li>
                     <li class="menu-item dropdown-element" onclick="dropDown('myDropdown-1')"><span class="menu-link dropdown-icon dropdown-element">Другие кеки</span>
                         <ul class="keki-dropdown dropdown-element" id="myDropdown-1">
