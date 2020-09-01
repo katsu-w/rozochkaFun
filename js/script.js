@@ -1,3 +1,6 @@
+const tooltip = document.querySelectorAll('.tooltip');
+const tooltipShow = document.querySelector('.tooltip-show');
+
 function dropDown(id) {
   document.getElementById(id).classList.toggle("show");
 }
@@ -22,3 +25,19 @@ window.onclick = e => {
         }
     }
 }
+
+
+function openTooltip(event) {
+    const tooltipText = event.target.dataset.tooltip;
+    tooltipShow.style.display = 'block';
+    tooltipShow.innerHTML = `<span class="tooltip-exit">✖</span> ${tooltipText}`;
+
+    const tooltipExit = document.querySelector('.tooltip-exit');
+    tooltipExit.addEventListener('click', () => {
+        tooltipShow.style.display = 'none';
+    });
+};
+
+tooltip.forEach(tooltip => {
+    tooltip.addEventListener('click', openTooltip)
+});
